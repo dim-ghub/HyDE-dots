@@ -4,7 +4,7 @@
 
 [cava.waybar]
 # 'cava.sh waybar' configuration
-max_instances = 2 # Maximum number of cava instances // fix and workaround when waybar won't kill 'cava ' process
+max_instances = 4 # Maximum number of cava instances // fix and workaround when waybar won't kill 'cava ' process
 bar = "▁▂▃▄▅▆▇█"
 width = 20
 range = 7
@@ -20,11 +20,11 @@ standby = "🎶"
 
 [cava.hyprlock]
 # 'cava.sh hyprlock' configuration
-max_instances = 4 # Maximum number of cava instances // fix and workaround when a process won't kill 'cava ' process
-bar = "🌑🌒🌓🌔🌕🌖🌗🌘"
+max_instances = 8 # Maximum number of cava instances // fix and workaround when a process won't kill 'cava ' process
+bar = "▁▂▃▄▅▆▇█"
 width = 20
 range = 7
-standby = "🎶"
+standby = "▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁"
 
 [weather]
 temperature_unit='f'	# Temperature unit to °C or °F ('c' or 'f')
