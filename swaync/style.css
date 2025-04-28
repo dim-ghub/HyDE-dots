@@ -1,0 +1,36 @@
+
+
+@define-color cc-bg #0D111B;
+@define-color noti-border-color #293452;
+
+@define-color noti-bg #0D111B;
+@define-color noti-bg-hover #3A4A6B;
+
+@define-color noti-bg-opaque #464C58;
+@define-color noti-bg-hover-opaque #4B5C7D;
+/* @define-color noti-bg-darker rgb(38, 38, 38); */
+/* @define-color noti-bg-focus #wallbash_pry3; */
+/* @define-color noti-close-bg rgba(255, 255, 255, 0.1); */
+/* @define-color noti-close-bg-hover rgba(255, 255, 255, 0.15); */
+@define-color text-color #FFFFFF;
+@define-color text-color-disabled #FFFFFF;
+
+
+/* @define-color noti-border-color #464C58; */
+.notification-row .notification-background .notification {
+  /* The actual notification */
+  border-radius: 12px;
+  border: 2px solid @noti-border-color;
+  padding: 5;
+  transition: background 0.15s ease-in-out;
+  background: @noti-bg;
+  opacity: 0.8;
+}
+
+.control-center {
+  /* The Control Center which contains the old notifications + widgets */
+  background: @cc-bg;
+  color: @text-color;
+  border-radius: 12px;
+  opacity: 0.9;
+}
