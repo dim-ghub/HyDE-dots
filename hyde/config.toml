@@ -28,10 +28,13 @@ standby = "▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁"
 
 [weather]
 temperature_unit='f'	# Temperature unit to °C or °F ('c' or 'f')
-time_format='12'		# Time format ('12h or 24h')
+time_format='12h'		# Time format ('12h or 24h')
 windspeed_unit='mph'	# Windspeed unit ('kh/h' or 'mph')
 show_icon= true			# Show the weather icon in waybar
 show_location= true	    # Show the location in waybar
 show_today= true		# Detailed description of today in tooltip
 forecast_days= 3 		# Number of days to show forecast (0-3)
 location = '34.244318, -89.008904'			# Location/coordinates string for the weather output
+
+[hyprland-start]
+notifications = "swaync"
