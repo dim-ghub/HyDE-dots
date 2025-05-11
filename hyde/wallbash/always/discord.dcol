@@ -1,122 +1,99 @@
 ${XDG_CACHE_HOME}/hyde/wallbash/discord.css|${WALLBASH_SCRIPTS}/discord.sh
-@import url('https://mwittrien.github.io/BetterDiscordAddons/Themes/DiscordRecolor/DiscordRecolor.css');
-@import url('https://raw.githubusercontent.com/surgedevs/visual-refresh-compact-title-bar/refs/heads/main/browser.css');
+@import url('https://raw.githubusercontent.com/refact0r/system24/refs/heads/main/theme/system24.theme.css');
+@import url("https://raw.githubusercontent.com/Augenbl1ck/Discord-Styles/refs/heads/main/userAreaSpotifyControl.css");
+
+body {
+    --font: '';
+    --code-font: '';
+    --ascii-loader: system24; /* off: default, system24: use system24 ascii loader, cats: use cats loader */
+}
 
 :root {
-  --accentcolor: <wallbash_pry1_rgb>;
-  --accentcolor2: <wallbash_pry2_rgb>;
-  --linkcolor: <wallbash_txt2_rgb>;
-  --mentioncolor: <wallbash_1xa5_rgb>;
-  --textbrightest: <wallbash_txt1_rgb>;
-  --textbrighter: <wallbash_txt2_rgb>;
-  --textbright: <wallbash_1xa9_rgb>;
-  --textdark: <wallbash_3xa9_rgb>;
-  --textdarker: <wallbash_txt3_rgb>;
-  --textdarkest: <wallbash_txt4_rgb>;
+    --colors: on; /* off: discord default colors, on: midnight custom colors */
 
-  --backgroundaccent: <wallbash_1xa5_rgb>;
-  --backgroundprimary: <wallbash_2xa1_rgb>;
-  --backgroundsecondary: <wallbash_pry1_rgb>;
-  --backgroundsecondaryalt: <wallbash_pry1_rgb>;
-  --backgroundtertiary: <wallbash_pry1_rgb>;
-  --backgroundfloating: <wallbash_2xa1_rgb>;;
-  --settingsicons: 1;
+    /* text colors */
+    --text-0: var(--bg-4); /* text on colored elements */
+    --text-1: #<wallbash_1xa9>; /* other normally white text */
+    --text-2: #<wallbash_1xa8>; /* headings and important text */
+    --text-3: #<wallbash_1xa7>; /* normal text */
+    --text-4: #<wallbash_1xa6>; /* icon buttons and channels */
+    --text-5: #<wallbash_1xa5>; /* muted channels/chats and timestamps */
+
+    /* background and dark colors */
+    --bg-1: #<wallbash_1xa1>; /* dark buttons when clicked */
+    --bg-2: #<wallbash_pry1>; /* dark buttons */
+    --bg-3: #<wallbash_pry1>; /* spacing, secondary elements */
+    --bg-4: #<wallbash_pry1>; /* main background color */
+    --hover: #<wallbash_2xa2>1a; /* channels and buttons when hovered */
+    --active: #<wallbash_2xa2>33; /* channels and buttons when clicked or selected */
+    --active-2: #<wallbash_2xa2>4d; /* extra state for transparent buttons */
+    --message-hover: var(--hover); /* messages when hovered */
+
+    /* accent colors */
+    --accent-1: var(--purple-1); /* links and other accent text */
+    --accent-2: var(--purple-2); /* small accent elements */
+    --accent-3: var(--purple-3); /* accent buttons */
+    --accent-4: var(--purple-4); /* accent buttons when hovered */
+    --accent-5: var(--purple-5); /* accent buttons when clicked */
+    --accent-new: var(--red-2); /* stuff that's normally red like mute/deafen buttons */
+    --mention: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 90%) 40%, transparent); /* background of messages that mention you */
+    --mention-hover: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 95%) 40%, transparent); /* background of messages that mention you when hovered */
+    --reply: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 90%) 40%, transparent); /* background of messages that reply to you */
+    --reply-hover: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 95%) 40%, transparent); /* background of messages that reply to you when hovered */
+
+    /* status indicator colors */
+    --online: var(--green-2); /* change to #40a258 for default */
+    --dnd: var(--red-2); /* change to #d83a41 for default */
+    --idle: var(--yellow-2); /* change to #cc954c for default */
+    --streaming: var(--purple-2); /* change to ##9147ff for default */
+    --offline: var(--text-4); /* change to #82838b for default offline color */
+
+    /* border colors */
+    --border-light: var(--hover); /* general light border color */
+    --border: var(--active); /* general normal border color */
+    --border-hover: var(--accent-2); /* border color of panels when hovered */
+    --button-border: #<wallbash_2xa2>1a; /* neutral border color of buttons */
+
+    /* base colors */
+    --red-1: #f78c8c;
+    --red-2: #ee7b7b;
+    --red-3: #e46969;
+    --red-4: #d95757;
+    --red-5: #cf4646;
+
+    --green-1: #86e2b5;
+    --green-2: #7acda3;
+    --green-3: #6eb991;
+    --green-4: #63a47e;
+    --green-5: #5b926e;
+
+    --blue-1: #8fbaff;
+    --blue-2: #7ba7f2;
+    --blue-3: #6794e0;
+    --blue-4: #5380cd;
+    --blue-5: #3f6cba;
+
+    --yellow-1: #f2d68f;
+    --yellow-2: #e6c47a;
+    --yellow-3: #d9b265;
+    --yellow-4: #cca050;
+    --yellow-5: #bf8e3b;
+
+    --purple-1: #<wallbash_1xa5>;
+    --purple-2: #<wallbash_1xa4>;
+    --purple-3: #<wallbash_1xa3>;
+    --purple-4: #<wallbash_1xa2>;
+    --purple-5: #<wallbash_1xa1>;
 }
+
 
 /* Any custom CSS below here */
-.visual-refresh [class^="layer_"] > form > [class^="focusLock__"] {
-  position: relative;
-  max-height: calc(100vh - var(--space-24) * 3);
-  top: calc(var(--space-24) / 2);
-}
-/* Hide nameplates */
-[style^="background: linear-gradient(90deg"]:has([src*="/nameplates/"]) { display: none; }
-[class*="dm_"]:has([class*="linkPlated_"]) {
-    & [class*="linkPlated_"] { padding-right: var(--space-16); }
-    & [class*="closeButtonPlated_"] {
-        opacity: 0.7;
-        &:hover { opacity: 1; }
-        & [class^="innerCloseButtonPlated"] {
-            opacity: unset; 
-            background: none;
-            & svg {
-                color: inherit;
-                &:is(:hover, :focus-within) { color: var(--interactive-hover); }
-            }
-        }
-    }
-}
-
-.visual-refresh section.panels_c48ade {
-  left: calc(var(--custom-guild-list-width) + var(--space-xs));
-  width: calc(100% - var(--custom-guild-list-width) - var(--space-xs)*2);
-  box-sizing: content-box;
-
-  .actionButtons_e131a9 button {
-    padding: 0;
-  }
-}
-nav.guilds_c48ade {
-  margin-bottom: 0 !important;
-}
-.sidebar_c48ade:after {
-  display: none;
-}
-/* BetterFolders fix (delete if you don't use) */
- .visual-refresh [style$="grid-area: betterFoldersSidebar;"]~section.panels_c48ade {
-  left: calc(var(--custom-guild-list-width)*2  + var(--space-xs));
-  width: calc(100% - var(--custom-guild-list-width)*2 - var(--space-xs)*2 ) !important;
-} 
-.panels_c48ade {
-    z-index: 10000!important; /* could not make the user appear over settings or modals, yyyeerrraarrsesssarseaandthgrasssmannpunkyeseyahhavinh */
-}
-.visual-refresh {
-    --custom-channel-textarea-text-area-height: 56px;
-    .form_f75fb0 {
-        margin: 0 8px 8px 8px;
-        padding: 0;
-        --chatbar-border-color: var(--border-faint);
-    }
-    .channelTextArea_f75fb0 {
-        margin: 0;
-        border-color: var(--chatbar-border-color);
-        transition: none;
-    }
-    .base_b88801 {
-        top: -24px;
-        left: 0;
-        right: 0;
-        background-color: var(--chat-background-default);
-        padding: 0 8px;
-        border-radius: var(--radius-sm) var(--radius-sm) 0 0;
-        border: 1px solid var(--chatbar-border-color);
-        border-bottom: none;
-        transition: none;
-        box-sizing: border-box;
-    }
-    .stackedBars__74017,
-    .threadSuggestionBar__841c8 {
-        border-color: var(--chatbar-border-color) !important;
-    }
-    .form_f75fb0:has(.base_b88801) {
-        .channelTextArea_f75fb0 {
-            border-radius: 0 0 var(--radius-sm) var(--radius-sm);
-        }
-    }
-    .form_f75fb0:has(.channelTextArea__74017:focus-within) {
-        --chatbar-border-color: var(--border-subtle);
-    }
-    .scrollerSpacer__36d07 {
-        height: calc(24px + 8px);
-    }
-    .scroller__36d07::-webkit-scrollbar-track {
-        margin-bottom: calc(20px + 8px);
-    }
-    .bottomBar__0f481 {
-        margin-bottom: 24px;
-    }
-    .wrapper__44df5 {
-        margin: 0;
-        border-radius: var(--radius-sm);
-    }
+.visual-refresh .panels_c48ade:hover .wrapper_e131a9,
+.visual-refresh .panels_c48a9 .wrapper_e131a9:hover,
+#vc-spotify-player:hover,
+.visual-refresh .panels_c48ade:hover #vc-spotify-player,
+.visual-refresh .panels_c48a9 .wrapper_e131a9:hover #vc-spotify-player {
+  transition:
+    transform 0.15s ease 0.01s,
+    opacity 0.3s ease 0.01s;
 }
