@@ -1,0 +1,5 @@
+"custom/os_button": {
+	"format": "",
+	"on-click": "~/.local/lib/hyde/rofilaunch.sh",
+	"tooltip": false
+},
