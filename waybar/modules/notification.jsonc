@@ -1,0 +1,11 @@
+"custom/notification": {
+    "tooltip": true,
+    "format": "{}",
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "~/.config/waybar/scripts/time_weather.sh",
+    "interval": 5,
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+},
